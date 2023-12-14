@@ -25,7 +25,7 @@ public class SigningSunmiPlugin implements FlutterPlugin, MethodCallHandler {
   @Override
   public void onMethodCall(@NonNull MethodCall call, @NonNull Result result) {
     if (call.method.equals("getSignEncryptedHash")) {
-      result.success(sign(call.argument('signStr')));
+      result.success(sign(call.argument("signStr")));
     } else {
       result.notImplemented();
     }
