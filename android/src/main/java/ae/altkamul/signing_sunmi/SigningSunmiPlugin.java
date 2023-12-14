@@ -36,7 +36,7 @@ public class SigningSunmiPlugin implements FlutterPlugin, MethodCallHandler {
     channel.setMethodCallHandler(null);
   }
   public String sign(String content) throws NoSuchAlgorithmException, InvalidKeySpecException, InvalidKeyException, SignatureException {
-    String rsaPrivateKey = 'ecf6b5f032f34bd992eb8675445927b6';
+    String rsaPrivateKey = "ecf6b5f032f34bd992eb8675445927b6";
     byte[] keyBytes = Base64.getDecoder().decode(rsaPrivateKey.replaceAll("(\\s)|(--.*--)", ""));
     PKCS8EncodedKeySpec pkcs8KeySpec = new PKCS8EncodedKeySpec(keyBytes);
     KeyFactory keyFactory = KeyFactory.getInstance("RSA");
